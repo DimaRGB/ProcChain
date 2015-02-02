@@ -37,54 +37,54 @@ callback, обозначим его onEnd, в указанном контекс�
 Пример использования класса, который должен получиться:
 
 
-var chain = new ProcChain();   // ProcChain - это класс, который управляет цепочкой вызовов.
+  var chain = new ProcChain();   // ProcChain - это класс, который управляет цепочкой вызовов.
 
 
-function PlaySomeFragmentedAnimation(){
+  function PlaySomeFragmentedAnimation(){
 
-    chainList = [];
+      chainList = [];
 
-	chainList.push(fragment1andParams); // заполняем массив функциями и их параметрами в каком либо виде.
-    chainList.push(fragment2andParams);
-    ...
-    ...
-    chainList.push(fragmentNandParams);
+  	chainList.push(fragment1andParams); // заполняем массив функциями и их параметрами в каком либо виде.
+      chainList.push(fragment2andParams);
+      ...
+      ...
+      chainList.push(fragmentNandParams);
 
-	chainList.add(chainList);   // инициализировать цепочку
+  	chainList.add(chainList);   // инициализировать цепочку
 
-	chain.start();             // запустить цепочку
-}
+  	chain.start();             // запустить цепочку
+  }
 
-function fragment1(ctx, onEnd, params){   // какой то фрагмент анимации
+  function fragment1(ctx, onEnd, params){   // какой то фрагмент анимации
 
-    ...
-	    //   play some animation using 'params'
-   ...
-   ...
-   ...
+      ...
+  	    //   play some animation using 'params'
+     ...
+     ...
+     ...
 
-   if(fragmentEnded){
+     if(fragmentEnded){
 
-     onEnd.call(ctx);
+       onEnd.call(ctx);
 
-   };
-};
+     };
+  };
 
-function fragment2(ctx, onEnd, params){  // еще один фрагмент анимации
+  function fragment2(ctx, onEnd, params){  // еще один фрагмент анимации
 
-    ...
-	    //   play some animation using 'params'
-   ...
-   ...
-   ...
+      ...
+  	    //   play some animation using 'params'
+     ...
+     ...
+     ...
 
-   if(fragmentEnded){
+     if(fragmentEnded){
 
-     onEnd.call(ctx);
+       onEnd.call(ctx);
 
-   };
-};
+     };
+  };
 
-...
+  ...
 
-...
+  ...
