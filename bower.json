@@ -1,0 +1,17 @@
+{
+    "name": "Test_Task",
+    "authors": [
+        "dima.rgb <dima.rgb@gmail.com>"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "",
+        "bootstrap": ""
+    }
+}
